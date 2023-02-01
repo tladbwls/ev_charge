@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1">
-  <title>EV Charge || Home</title>
+  <title>Search Result || Home</title>
 
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
@@ -13,8 +13,8 @@
 
 </head>
 <body>
+  <!-- Header -->
   <div class="wrapper">
-    <!-- header -->
     <header class="border-bottom">
       <div class="center border-side">
         <div class="logo"><a href="/EV_CHARGE/index.html" title="EV">EV</a></div>
@@ -23,34 +23,15 @@
     </header>
 
     <!-- section -->
-    <section class="slogan-sec">
-      <div class="center border-side">
-        <div class="main-slogan">
-          <div class="icon">
-            <i class="ri-charging-pile-fill"></i>
-          </div>
-          <h3>Chrgign Your Car Faster!!</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="bar-sec border-top">
-      <div class="center border-side">
-        <div class="search-bar">
-          <input type="text" placeholder="지역명 또는 충전소명을 입력해주세요" title="지역명 또는 충전소를 입력해주세요.">
-          <button><i class="ri-map-pin-fill"></i></button>
-        </div>
-        <div class="near-btns">
-        <button>현재 위치가 속한<em class="crt-gu"></em>로 검색</button>
-      </div>
-      </div>
+    <section class="map-sec">
+      <div class="map" id="map"></div>
     </section>
 
     <!-- Fotter -->
     <footer class="border-top">
       <div class="center border-side">
         <p>&copy; Copyright 2013</p>
-        <p>Powered by MongProject - Developed By zipte</p>
+        <p>Powered by MongProject - Developed By Marshall</p>
       </div>
     </footer>
 
@@ -60,6 +41,6 @@
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
 
-  <script src="/EV_CHARGE/js/getCrt.js"></script>
+  <script src="/EV_CHARGE/js/getCrtLists.js"></script>
 </body>
 </html>
