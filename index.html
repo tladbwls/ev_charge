@@ -29,7 +29,7 @@
           <div class="icon">
             <i class="ri-charging-pile-fill"></i>
           </div>
-          <h3>Chrgign Your Car Faster!!</h3>
+          <h3>Chrging Your Car Faster!!</h3>
         </div>
       </div>
     </section>
@@ -41,7 +41,7 @@
           <button><i class="ri-map-pin-fill"></i></button>
         </div>
         <div class="near-btns">
-        <button>현재 위치가 속한<em class="crt-gu"></em>로 검색</button>
+        <button>현재 위치가 속한 <em class="crt-gu"></em>로 검색</button>
       </div>
       </div>
     </section>
@@ -54,12 +54,21 @@
       </div>
     </footer>
 
+    <div class="loading-wrapper">
+      <div class="loading-spinner"></div>
+    </div>
+
   </div>
 
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
+  <script src="/EV_CHARGE/js/crtPos.js"></script>
   <script src="/EV_CHARGE/js/getCrt.js"></script>
+  <script>
+    $(document).ajaxComplete(function () {  //ajaxComplete 결과가 끝날 때까지
+      $(".loading-wrapper").fadeOut();
+    });
+  </script>
 </body>
 </html>

@@ -35,12 +35,22 @@
       </div>
     </footer>
 
+    <div class="loading-wrapper">
+      <div class="loading-spinner"></div>
+    </div>
+
   </div>
 
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=059a0968c4c0f73559fb60718b473dca"></script>
+  <script src="/EV_CHARGE/js/crtPos.js"></script>
   <script src="/EV_CHARGE/js/getCrtLists.js"></script>
+  <script>
+    $(document).ajaxComplete(function () {  //ajaxComplete 결과가 끝날 때까지
+      $(".loading-wrapper").fadeOut();
+    });
+  </script>
 </body>
 </html>
