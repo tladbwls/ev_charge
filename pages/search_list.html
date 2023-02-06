@@ -9,7 +9,7 @@
   <!-- Remix Icon -->
   <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
   <!-- Main Css Link -->
-  <link rel="stylesheet" href="/EV_CHARGE/css/style.css">
+  <link rel="stylesheet" href="/ev_charge/css/style.css">
 
 </head>
 <body>
@@ -17,22 +17,27 @@
   <div class="wrapper">
     <header class="border-bottom">
       <div class="center border-side">
-        <div class="logo"><a href="/EV_CHARGE/index.html" title="EV">EV</a></div>
-        <div class="home"><a href="/EV_CHARGE/index.html" title="홈"><i class="ri-home-3-fill"></i></a></div>
+        <div class="logo"><a href="/ev_charge/index.html" title="EV">EV</a></div>
+        <div class="home"><a href="/ev_charge/index.html" title="홈"><i class="ri-home-3-fill"></i></a></div>
       </div>
     </header>
 
     <!-- section -->
     <section class="map-sec">
+      <div class="center border-side">
       <div class="map" id="map"></div>
+    </div>
     </section>
-
+   
     <section class="map-lists">
+      <div class="center">
       <div class="lists">
         <div class="list-up-down">
           <i class="ri-arrow-up-s-line"></i>
         </div>
         <div class="item-list border-top border-bottom">
+          <div class="items"></div>
+          <button>더보기</button>
           <!-- <div class="item">
             <p>서울특별시 마포구 성산동 531 경기장 서편 주차장</p>
             <div class="stats">
@@ -80,7 +85,7 @@
           </div> -->
         </div>
       </div>
- 
+    </div>
     </section>
 
     <!-- Fotter -->
@@ -102,8 +107,8 @@
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=059a0968c4c0f73559fb60718b473dca"></script>
-  <script src="/EV_CHARGE/js/crtPos.js"></script>
-  <script src="/EV_CHARGE/js/getCrtLists.js"></script>
+  <script src="/ev_charge/js/crtPos.js"></script>
+  <script src="/ev_charge/js/getCrtLists.js"></script>
   <script>
     // $(document).ajaxComplete(function () {  //ajaxComplete 결과가 끝날 때까지
     //   const h = $('footer.border-top').outerHeight();
@@ -125,6 +130,11 @@
      });
    });
 
+  </script>
+  <script>
+    $(document).ajaxComplete(function () {  //ajaxComplete 결과가 끝날 때까지
+      $(".loading-wrapper").fadeOut();
+    });
   </script>
 </body>
 </html>
